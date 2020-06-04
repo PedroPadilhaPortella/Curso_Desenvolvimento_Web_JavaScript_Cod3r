@@ -15,3 +15,4 @@ console.log(!!undefined);
 console.log(!!0)
 //retorna o primeiro true
 console.log('' || 0 || false || NaN || "oi");
+//usado para criar valores padrões usando || (ou)
