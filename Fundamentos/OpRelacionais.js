@@ -17,5 +17,3 @@ console.log("9)", data01 == data02);
 console.log("10)", data01.getTime() == data02.getTime());
 console.log("11)", undefined == null);
 console.log("12)", undefined === null);
-console.log("13)",);
-console.log("14)",);
