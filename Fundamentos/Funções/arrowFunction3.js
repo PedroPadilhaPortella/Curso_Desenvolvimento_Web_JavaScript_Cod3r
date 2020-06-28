@@ -19,7 +19,6 @@ compararThisArrow(module.exports)//true
 compararThisArrow(this)//true porque ele é o módule.exports
 
 
-
 compararThisArrow = compararThisArrow.bind(obj)
 compararThisArrow(obj) //nesse caso, o this não é alterada sua referencia e continua apontando para o module.exports
 compararThisArrow(module.exports)
