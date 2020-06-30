@@ -5,10 +5,15 @@ function Carro(delta = 5, velocidadeMaxima = 200){
     //metodo publico
     this.acelerar = function(){
         if(velocidadeAtual + delta <= velocidadeMaxima){
-                velocidadeAtual += delta;
+                velocidadeAtual += delta
         }else{
-            velocidadeAtual = velocidadeMaxima;
+            velocidadeAtual = velocidadeMaxima
         }
+    }
+
+    //metodo publico
+    this.getVelocidadeAtual = function (){
+        return velocidadeAtual
     }
 
 }
