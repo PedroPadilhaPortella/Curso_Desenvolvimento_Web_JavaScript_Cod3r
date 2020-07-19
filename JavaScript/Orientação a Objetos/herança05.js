@@ -21,7 +21,7 @@ console.log(arr.second())
 console.log(['pedro', 'gabriel', 'casalli'].second())
 
 String.prototype.toString = function(){
-    return 'Voce acabou de sobreescrever o método toStr'
+    return 'Voce acabou de sobreescrever o método toString'
 }
 
-console.log(''.reverse())
+console.log('pedro'.reverse())
