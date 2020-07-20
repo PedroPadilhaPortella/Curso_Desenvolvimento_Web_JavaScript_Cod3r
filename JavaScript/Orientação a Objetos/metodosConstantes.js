@@ -21,3 +21,7 @@ pessoa.sexo = 'feminino'
 delete pessoa.idade
 pessoa.nome = 'Joyce'
 console.log(pessoa)
+
+//Object.frezze
+//congela o objeto, impedindo modificar atributos e os valores se tornam constantes
+//writable = false
