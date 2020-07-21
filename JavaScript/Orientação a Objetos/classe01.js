@@ -1,3 +1,5 @@
+/*Em javascript, as classes nada mais são do que funções escritas com um jeito diferente, a herança das classes são baseadas em prototype*/
+
 class Lancamento{
     constructor(nome = "Anonimo", valor = 0){
         this.nome = nome
