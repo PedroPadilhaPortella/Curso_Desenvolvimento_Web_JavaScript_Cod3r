@@ -7,7 +7,6 @@ Array.prototype.map2 = function(callback){
     return newArray;
 }
 
-
 const carrinho = [
     '{"nome": "Borracha", "preco": 3.45}',
     '{"nome": "Caderno", "preco": 13.90}',
@@ -17,6 +16,6 @@ const carrinho = [
 
 const paraObjeto = json => JSON.parse(json);
 const getPrecos = array => array.preco;
-let total = carrinho.map2(paraObjeto).map2(getPrecos)
+let total = carrinho.map2(paraObjeto).map2(getPrecos).filter(soma)
 
 console.log(total)
