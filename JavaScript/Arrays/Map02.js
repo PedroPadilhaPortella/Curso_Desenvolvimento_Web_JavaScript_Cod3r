@@ -7,7 +7,6 @@ const carrinho = [
 
 const paraObjeto = json => JSON.parse(json);
 const getPrecos = array => array.preco;
+let total = carrinho.map(paraObjeto).map(getPrecos)
 
-let precos = carrinho.map(paraObjeto).map(getPrecos)
-
-console.log(precos)
+console.log(total)
