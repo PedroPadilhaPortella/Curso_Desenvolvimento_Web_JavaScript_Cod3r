@@ -1,4 +1,4 @@
-//criando um método ForEach a partir de um prototype
+//criando um método ForEach2() a partir de um prototype
 Array.prototype.forEach2 = function(callback){
     for (let i = 0; i < this.length; i++) {
         callback(this[i], i, this)
