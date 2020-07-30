@@ -12,6 +12,3 @@ axios.get(url).then(response =>{
     const pessoa = funcionarios.filter(chineses).filter(mulheres).reduce(menorSalario)
     console.log(pessoa)
 })
-
-
-
