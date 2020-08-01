@@ -2,13 +2,16 @@
   "name": "curso_desenvolvimento_web_javascript",
   "version": "1.0.0",
   "description": "Curso Desenvolvimento Web Moderno com JavaScript! COMPLETO 2020 + Projetos",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
     "axios": "^0.19.2",
-    "lodash": "^4.17.19"
+    "express": "^4.17.1",
+    "lodash": "^4.17.19",
+    "nodemon": "^2.0.4"
   },
   "devDependencies": {},
   "scripts": {
+    "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
