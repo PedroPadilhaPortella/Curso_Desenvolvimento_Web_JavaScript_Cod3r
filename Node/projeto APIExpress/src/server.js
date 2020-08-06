@@ -20,7 +20,7 @@ app.post('/produtos', (req, res, next) => {
         nome: req.body.nome,
         preco: req.body.preco
     })
-    res.send(produto) // JSON
+    res.send(produto)
 })
 
 app.put('/produtos/:id', (req, res, next) => {
@@ -29,12 +29,12 @@ app.put('/produtos/:id', (req, res, next) => {
         nome: req.body.nome,
         preco: req.body.preco
     })
-    res.send(produto) // JSON
+    res.send(produto)
 })
 
 app.delete('/produtos/:id', (req, res, next) => {
     const produto = bancoDeDados.excluirProduto(req.params.id)
-    res.send(produto) // JSON
+    res.send(produto)
 })
 
 app.listen(porta, () => {
