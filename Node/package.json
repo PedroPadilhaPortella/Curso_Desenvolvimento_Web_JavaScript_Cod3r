@@ -2,7 +2,7 @@
   "name": "node",
   "version": "1.0.0",
   "description": "capitulo sobre Node",
-  "main": "index.js",
+  "main": "projeto APIExpress/src/server.js",
   "scripts": {
     "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
