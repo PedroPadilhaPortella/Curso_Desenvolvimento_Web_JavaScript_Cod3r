@@ -1,5 +1,6 @@
 //Promessa, é usada quando você quer ter um processamento assincrono, que pode resultar em uma Resolved Promise ou em uma Rejected Promise
 //É semelhante a usar Callbacks
+console.log(typeof Promise)
 
 function speakAfter (tempo, frase) {
     return new Promise((resolve, reject) => {
