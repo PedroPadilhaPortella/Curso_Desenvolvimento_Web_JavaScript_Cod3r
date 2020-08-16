@@ -15,4 +15,4 @@ function lerArquivo (caminho) {
 lerArquivo(caminho)
     .then(conteudo => conteudo.split('\r\n'))
     .then(conteudo => conteudo.join('\t\t'))
-    .then(conteudo => console.log(conteudo))
+    .then(console.log)
