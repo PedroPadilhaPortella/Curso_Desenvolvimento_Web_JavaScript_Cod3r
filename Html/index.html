@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Index de Exercícios Html</title>
+</head>
+
+<body>
+    <header>
+        Exercicios HTML
+    </header>
+
+    <nav>
+        <a href="" navlink="exercicios/01.html">01</a>
+    </nav>
+
+    <section id="conteudo">
+
+    </section>
+
+    <footer>
+        Curso de Web Moderno
+    </footer>
+
+    <script>
+        document.querySelectorAll('[navlink]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+
+            link.onclick = function(e) {
+                e.preventDefault()
+
+                //promise de requisicao ajax que retorna o href do link
+                fetch(link.getAttribute('navlink'))
+                    .then(response => response.text()) //promise que retorna o texto do link
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+
+</html>
