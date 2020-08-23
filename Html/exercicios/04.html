@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="style.css">
+
+<!--Listas Aninhadas-->
+<h1>Projeto</h1>
+<ul class="tree">
+    <li> <span display>Backend</span>
+        <ul>
+            <li><span display>app</span>
+                <ul>
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li><span display>config</span>
+                <ul>
+                    <li>data.js</li>
+                    <li>server.js</li>
+                    <li>routes.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><span display>Frontend</span>
+        <ul>
+            <li><span display>public</span>
+                <ul>
+                    <li>app.js</li>
+                    <li>app.css</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+var display = document.querySelectorAll('[display]').forEach(folder => {
+    folder.onclick = function(e) {
+        const ul = folder.nextElementSibling
+        const d = ul.style.display
+        ul.style.display = d === 'none'? 'block' : 'none'
+    }
+})
+</script>
