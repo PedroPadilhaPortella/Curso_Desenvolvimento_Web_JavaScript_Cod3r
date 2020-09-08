@@ -6,6 +6,18 @@
     <style>
         body {
             font-size: 45px;
+            margin: 0;
+        }
+        div{
+            background-color: deepskyblue;
+            width: 1000px;
+            height: 300px;
+            padding: 100px;
+            border: solid 20px;
+            /*considera a borda parte da caixa da div, que deve ter 100% width, considerando o padding, border e margin */
+            box-sizing: border-box;
+            /*considera apenas o conteudo caixa da div, entao o padding e a borda não são considerados */
+            box-sizing: content-box;
         }
     </style>
 </head>
