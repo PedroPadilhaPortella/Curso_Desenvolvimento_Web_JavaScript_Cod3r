@@ -4,7 +4,23 @@
     <meta charset="UTF-8">
     <title>Unidades #02</title>
     <style>
-        /* ... */
+        .fora{
+            position: relative;
+            background-color: orange;
+            width: 400px;
+            height: 400px;
+            padding: 50px;
+        }
+        .dentro{
+            background-color: mediumslateblue;
+            height: 100px;
+            width: 100%;
+            position: static; /* padrao, ocupa apenas o padrao */
+            position: relative;
+            position: absolute; /* conteudo + padding*/
+            position: fixed; /* considera o tamanho da viewport*/
+
+        }
     </style>
 </head>
 <body>
