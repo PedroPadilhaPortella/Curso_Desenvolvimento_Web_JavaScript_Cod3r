@@ -20,6 +20,26 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body{
+            display: grid;
+            /* existem 9 celulas, mas apenas 3 são visiveis */
+            /* podemos nomear as linhas e colunas do grid e usa-las como parametros */
+            grid-template-columns: [inicio] 1fr [meio1] 1fr [meio2] 1fr [fim];
+            grid-template-rows: 1fr 1fr 1fr;
+
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            grid-gap: 100px 50px; /*o grid-gap é como uma margem do grid-template*/
+        }
+        .d1{
+            grid-column-start: meio2;
+            grid-column-end: fim;
+            grid-column: meio1 / fim;
+            grid-row: 1 / span 2;
+            grid-area: 1 / meio1 / span 3 / fim; /*grid-row-start, grid-column-start, grid-row-end, grid-column-end*/
+
+        }
     </style>
 </head>
 
