@@ -9,8 +9,34 @@
     <div id="primeiro">#primeiro</div>
     <div>Segundo</div>
     <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
-    <script>              
-        // ...
+    <script>
+        document.querySelector('#primeiro').classList.add('destaque')
+
+        const selecionar = seletor => {
+            document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque'))
+        }
+
+        const desselecionar = seletor => {
+            document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque'))
+        }
+
+        selecionar('div')//todas as divs
+        desselecionar('*')
+
+        selecionar('.terceiro.ultimo')//o que tem a classe .terceiro e .ultimo
+        desselecionar('*')
+
+        selecionar(':not(#primeiro') //tudo exceto o que tem o id primeiro
+        desselecionar('*')
+
+        selecionar(':nth-child(1)')//primeiro filho direto de um elemento 
+        desselecionar('*')
+
+        selecionar('div:nth-of-type(1)') //primeiro elemento do tipo div
+        desselecionar('*')
+
+        selecionar('[wb-attrib]') // elementos que tem esse atributo
+
     </script>
 </body>
 </html>
