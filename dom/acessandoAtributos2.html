@@ -10,14 +10,34 @@
 <body class='conteudo exercicio'>
     <div>
         <label for="compras">Compras</label>
-        <ul id="compras" destino='escritório' data-urgencia="5">
+        <ul id="compras" destino='escritório' data-urgencia="5" data-something="tchola">
             <li>Café</li>
             <li>Água</li>
             <li>Copo Descartável</li>
         </ul>
     </div>
     <script>
-        // ...
+        const lista = document.querySelector('div ul[destino="escritório"]')
+        console.log('elemento ul', lista.childNodes) //mostra os childs da ul
+        console.log('lista id =', lista.id) //mostra o valor do id da ul
+        console.log('getAttribute destino =', lista.getAttribute('destino')) //pega o valor do atributo
+        lista.setAttribute('destino', 'empresa') //altera o atributo
+        lista.setAttribute('status', 'aberto') //adiciona um atributo
+        lista.removeAttribute('empresa')
+        console.log('hasAttribute', lista.hasAttribute('status')) //verifica se o elemento tem determinado atributo
+        console.log('hasAttribute', lista.hasAttribute('destino')) //verifica se o elemento tem determinado atributo
+
+        //atributos iniciados com 'data' são tratados de modo diferente
+        console.log(lista.dataset)
+        console.log(lista.dataset.something)
+        lista.dataset.urgencia = 'red protocol'
+        console.log(lista.getAttribute('data-urgencia'))
+
+        //cuidado, o javascript não tem suporte para certas propriedades, como o for da label
+        const label = document.querySelector('label')
+        console.log(label.for) //undefined
+        console.log(label.htmlFor) //maneiras corretas
+        console.log(label.getAttribute('for'))
     </script>
 </body>
 

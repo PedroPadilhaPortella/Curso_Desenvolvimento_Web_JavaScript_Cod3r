@@ -27,11 +27,23 @@
         <select name="hl">
             <option value="pt-br">Português (Brasil)</option>
             <option value="en-us">Inglês (Americano)</option>
+            <option value="ja">Japonês</option>
         </select>
         <button>Pesquisar</button>
     </form>
     <script>
-        // ...
+        // Diferentes formas de selecionar elementos, em especial, forms
+        console.log(document.forms)
+        console.log(document.forms[0])
+        console.log(document.getElementsByName('pesquisa'))
+        console.log(document.getElementsByTagName('form'))
+        console.log(document.pesquisa)
+        console.log(document.pesquisa.q)
+        //o q é a query de pesquisa do google
+        //o hl é o codido de linguagens google
+        document.pesquisa.q.value = "Pedro Portella"
+        document.pesquisa.hl.value = "en-us"
+        console.log(document.pesquisa.hl.selectedIndex)
     </script>
 </body>
 
