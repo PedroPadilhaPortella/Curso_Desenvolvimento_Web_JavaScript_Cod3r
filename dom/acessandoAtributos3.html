@@ -16,7 +16,16 @@
         </ul>
     </div>
     <script>
-        // ...
+        const lista = document.querySelector('#compras')
+        //selecionando os atributtos, mas somente leitura
+        console.log(lista.attributes) 
+        console.log(lista.attributes[0])
+        console.log(lista.attributes[2])
+        console.log(lista.attributes.destino)
+        console.log(lista.attributes.id)
+        console.log(lista.attributes['data-urgencia'])
+        lista.attributes.destino = 'casa' //altera o js, mas não altera no html
+        console.log(lista.attributes.destino)
     </script>
 </body>
 
