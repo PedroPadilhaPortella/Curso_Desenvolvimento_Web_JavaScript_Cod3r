@@ -8,8 +8,40 @@
 </head>
 
 <body class='conteudo exercicio'>
+    <button onclick="executar()">Executar</button>
     <script>
-        // ...
+        function executar(){
+            const body = document.querySelector('body')
+
+            const div1 = document.createElement('div') //criar elementos
+            div1.classList.add('destaque') //adiciona classes
+            div1.innerHTML = 'Primeira Div' //adiciona textos html
+
+            const div2 = document.createElement('div')
+            div2.setAttribute('wb-atributo', 'valor')//adiciona atributos
+            div2.innerHTML = 'Segunda Div'
+
+            const p = document.createElement('p')
+            p.innerHTML = 'Paragrafo da div 3'
+            const div3 = document.createElement('div')
+            div3.appendChild(p)
+
+            body.appendChild(div2)//adiciona child ao body
+            body.appendChild(div1)
+            body.appendChild(div3)
+
+            const texto1 = document.createTextNode('Antes..')//criar um texto
+            const texto2 = document.createTextNode('Depois..')//criar um texto
+            div3.insertBefore(texto1, div3.childNodes[0])//adicionar em uma determinada posicao
+            div3.insertBefore(texto2, div3.childNodes[2])
+
+            const div4 = div3.cloneNode(true) //deep clone, junto com os children
+            const div5 = div3.cloneNode(false)//deep clone, sem os children
+
+            body.appendChild(div4)
+            body.appendChild(div5)
+            body.removeChild(div3)
+        }
     </script>
 </body>
 
