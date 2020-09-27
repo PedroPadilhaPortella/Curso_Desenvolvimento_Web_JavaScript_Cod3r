@@ -12,7 +12,17 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+        div = document.querySelector('div')
+        // div.outerHTML = "Usando outer HTML"
+        div.innerHTML = "<h3>Texto Central<h3>"
+        div.insertAdjacentHTML('beforebegin',"<p>Antes do Inicio<p>")
+        div.insertAdjacentHTML('afterbegin',"<p>Depois do Inicio<p>")
+        div.insertAdjacentHTML('beforeend',"<p>Antes do Fim<p>")
+        div.insertAdjacentHTML('afterend',"<p>Depois do Fim<p>")
+
+        //somente texto, sem html
+        console.log(div.innerHTML)
+        console.log(div.innerText)
     </script>
 </body>
 
