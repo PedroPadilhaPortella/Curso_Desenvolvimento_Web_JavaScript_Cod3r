@@ -61,3 +61,12 @@
     font-size: 70px;
     z-index: 100;
 }
+
+.botao{
+    color: black;
+    background-color: greenyellow;
+    margin: 5px;
+    padding: 5px;
+    border: yellowgreen solid 2px;
+    border-radius: 5px;
+}
