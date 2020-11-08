@@ -14,6 +14,21 @@
     <div>2</div>
 
     <script>
-        // ...
+//o jQuery não trabalha com os objetos puros da DOM, como no javascript puro, mas encapsula esses elementos em um objeto para que ele possa ser manipulado e ter chamadas encadeadas, por meio do Design Pattern Decorator.
+
+        // jQuery('div').hide(3000).show(3000).fadeOut(2000).fadeIn(2000)
+        $('div').hide(3000).show(3000).fadeOut(2000).fadeIn(2000)
+
+        console.log($('div').get(1)) //obter o nó da DOM
+
+        console.log($.isEmptyObject( { nome : null } )) //funções utilitárias
+        console.log(jQuery.inArray(5, [1, 2, 3, 5]))
+
+        $.fn.fundoVerde = function() {
+            this.css('background-color', 'green')
+            return this
+        }
+
+        $('body').fundoVerde().fadeOut(1000)
     </script>
 </body>
