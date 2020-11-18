@@ -1,5 +1,16 @@
-<!-- Título (jumbotron) -->
-<!-- Breadcrumb -->
+<div class="jumbotron p-4 my-1">
+    <h1 class="display-4">Fundamentos</h1>
+    <p class="lead m-1">Alguns recursos importantes do Bootstrap</p>
+</div>
+
+<nav class="mb-5">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="#/paginas/bemVindo.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Fundamentos</li>
+    </ol>
+</nav>
 
 <div class="exercicio">
     <h1>1. Tipografia -
@@ -17,6 +28,7 @@
         <li>Fontes nativas</li>
     </ul>
 
+    <!-- Espaços -->
     <h1 class="mt-5">2. Espaços -
         <small>
             <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/" target="_black">Documentação Oficial</a>
@@ -24,8 +36,16 @@
     </h1>
     <hr>
 
-    <!-- Espaços -->
+    <!-- 
+        (padding e margin) => {p, m},
+        (left, right, top, bottom, eixoX, eixoY) => {l, r, t, b, x, y} 
+    -->
+    <div class="mb-5">margin bottom 5</div>
+    <div class="m-4 py-4">margin bottom 4 e padding no eixo y (left and right)</div>
+    <div class="pt-6">padding top 5</div>
 
+
+    <!-- Cores -->
     <h1 class="mt-5">3. Cores -
         <small>
             <a href="https://getbootstrap.com/docs/4.0/utilities/colors/" target="_black">Documentação Oficial</a>
@@ -33,8 +53,16 @@
     </h1>
     <hr>
 
-    <!-- Cores -->
+    <div class="my-1 p-3 bg-primary text-light">Primary</div>
+    <div class="my-1 p-3 bg-secondary text-light">Secondary</div>
+    <div class="my-1 p-3 bg-success text-white">Success</div>
+    <div class="my-1 p-3 bg-info text-light">Info</div>
+    <div class="my-1 p-3 bg-warning text-dark">Warning</div>
+    <div class="my-1 p-3 bg-danger text-white">Danger</div>
+    <div class="my-1 p-3 bg-dark text-light">Dark</div>
+    <div class="my-1 p-3 bg-white text-dark">White</div>
 
+    <!-- Flex -->
     <h1 class="mt-5">4. Flex -
         <small>
             <a href="https://getbootstrap.com/docs/4.0/utilities/flex/" target="_black">Documentação Oficial</a>
@@ -42,8 +70,49 @@
     </h1>
     <hr>
 
-    <!-- Flex -->
+    <p class="h3">Usando a classe d.flex, torna seus filhos diretos flexiveis, o flex-column-reverse, reverte a ordem em que eles são dispostos, cada elemento tem aling-self, em end, center ou start.</p>
 
+    <!-- Tipos de Display Flex:
+            .d-flex
+            .d-inline-flex
+            .d-sm-flex
+            .d-sm-inline-flex
+            .d-md-flex
+            .d-md-inline-flex
+            .d-lg-flex
+            .d-lg-inline-flex
+            .d-xl-flex
+            .d-xl-inline-flex
+        Também temos a variação do display em, que varia de acordo com o tamanho (sm ,md, lg, xl):
+            .flex-row e .flex-row-reverse
+            .flex-column e .flex-column-reverse
+        E o justify-content, que também varia de acordo com o tamanho (sm , md, lg, xl):
+            .justify-content-start
+            .justify-content-end
+            .justify-content-center
+            .justify-content-between
+            .justify-content-around
+        Temos align-items de acordo com o tamanho (sm , md, lg, xl):
+            .align-items-start
+            .align-items-end
+            .align-items-center
+            .align-items-baseline
+            .align-items-stretch
+        Temos align-self de acordo com o tamanho (sm , md, lg, xl):
+            .align-self-start
+            .align-self-end
+            .align-self-center
+            .align-self-baseline
+            .align-self-stretch
+    -->
+
+    <div class="d-flex flex-column-reverse p-2">
+        <div class="align-self-end bg-success">1</div>
+        <div class="align-self-center bg-primary">2</div>
+        <div class="align-self-start bg-danger">3</div>
+    </div>
+    
+    <!-- Imagens -->
     <h1 class="mt-5">5. Imagens -
         <small>
             <a href="https://getbootstrap.com/docs/4.0/content/images/" target="_black">Documentação Oficial</a>
@@ -51,8 +120,14 @@
     </h1>
     <hr>
 
-    <!-- Imagens -->
+    <div class="p-2">
+        <img src="/imgs/img1.png" alt="imagem 1" class="mx-auto d-block rounded" width="400">
+        <img src="/imgs/img1.png" alt="imagem 1" class="img-thumbnail" width="400">
+        <img src="/imgs/img1.png" alt="imagem 1" class="img-fluid d-block rounded-circle" width="400">
+    </div>
 
+
+    <!-- Float -->
     <h1 class="mt-5">6. Float -
         <small>
             <a href="https://getbootstrap.com/docs/4.0/utilities/float/" target="_black">Documentação Oficial</a>
@@ -60,7 +135,16 @@
     </h1>
     <hr>
 
-    <!-- Float -->
+    <!--Podemos usar float para definir a posição de elementos na página, mas é recomendado que usemos flexbox.
+        Dentre as posibilidades, temos estas, que podem ser aplicadas junto com os viewports(sm, md, lg, xl):
+            .float-left
+            .float-right
+            .float-none
+    -->
+    <div class="my-1 p-3 float-left">1</div>
+    <div class="my-1 p-3 float-right">2</div>
+    <div class="my-1 p-3 float-xl-left float-lg-right float-md-left float-sm-right">3</div>
+
 </div>
 
 <style>
