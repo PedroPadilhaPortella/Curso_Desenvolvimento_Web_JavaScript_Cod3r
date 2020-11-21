@@ -18,30 +18,97 @@
 </p>
 
 <div class="exercicio">
+
+    <!-- Grid Básica -->
     <h1>1. Grid Básica</h1>
     <hr>
 
-    <!-- Grid Básica -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col bg-primary">2</div>
+            <div class="col bg-danger">2</div>
+            <div class="col bg-warning">3</div>
+            <div class="col bg-info">4</div>
+            <div class="col bg-secondary">5</div>
+            <div class="col">6</div>
+        </div>
+    </div>
+    <div class="row m-3">
+        <div class="col bg-danger">1</div>
+        <div class="col-4 bg-warning">2</div>
+        <div class="col-5 bg-info">3</div>
+        <div class="col bg-primary">4</div>
+    </div>
 
+
+    <!-- Grid Responsiva -->
     <h1 class="mt-5">2. Grid Responsiva</h1>
     <hr>
 
-    <!-- Grid Responsiva -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-primary">1</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-secondary">2</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-danger">3</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-warning">4</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-info">5</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-success">6</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-primary">7</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-secondary">8</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-danger">9</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-warning">10</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-info">11</div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1 bg-success">12</div>
+        </div>
+    </div>
 
+
+    <!-- Quebra de Linha -->
     <h1 class="mt-5">3. Quebra de Linha</h1>
     <hr>
 
-    <!-- Quebra de Linha -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 bg-primary">1</div>
+            <div class="col-3 bg-info">2</div>
+            <div class="col-7 bg-danger">3</div>
+            <div class="w-100 bg-success"></div>
+            <div class="col-3 bg-warning">4</div>
+        </div>
+    </div>
 
+
+    <!-- Ordem -->
     <h1 class="mt-5">4. Ordem</h1>
     <hr>
 
-    <!-- Ordem -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 bg-primary offset-">1</div>
+            <div class="col-2 bg-danger order-12">2</div>
+            <div class="col-2 bg-success order-1">3</div>
+            <div class="col-2 bg-warning order-first">4</div>
+            <div class="col-2 bg-secondary order-last">5</div>
+            <div class="col-2 bg-white">6</div>
+        </div>
+    </div>
 
+
+    <!-- Offset -->
     <h1 class="mt-5">5. Offset</h1>
     <hr>
 
-    <!-- Offset -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 offset-lg-7 bg-primary">1</div>
+            <div class="col-lg-4 offset-lg-3 bg-danger">2</div>
+            <div class="col-lg-6 offset-lg-1 bg-success">3</div>
+            <!--<div class="col-2 bg-warning order-first">4</div>
+            <div class="col-2 bg-secondary order-last">5</div>
+            <div class="col-2 bg-white">6</div> -->
+        </div>
+    </div>
+
 
     <h1 class="mt-5">6. Alinhamento</h1>
     <hr>
