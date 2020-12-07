@@ -1,6 +1,7 @@
-import './Main.css'
-import React from 'react'
-import Header from './Header'
+import React from 'react';
+import './Main.css';
+import Header from './src/components/templates/Header';
+
 
 export default props =>
     <React.Fragment>
