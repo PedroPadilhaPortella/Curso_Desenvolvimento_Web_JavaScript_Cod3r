@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta Bic Preta",
+      "price": "19.99"
+    },
+    {
+      "id": 2,
+      "name": "Caderno Espiral 90 folhas Naruto",
+      "price": "19.99"
+    },
+    {
+      "id": 3,
+      "name": "Notebook Mac Pro",
+      "price": "5600.00"
+    },
+    {
+      "id": 4,
+      "name": "Notebook Lenovo Ideapad",
+      "price": "2300.00"
+    }
+  ]
+}
