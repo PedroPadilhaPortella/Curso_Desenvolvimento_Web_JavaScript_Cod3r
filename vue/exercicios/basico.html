@@ -7,9 +7,33 @@
     <script src="/js/vue.min.js"></script>
 </head>
 <body class="exercicio">
+    <div id="app">
+        <p>1) Cliente: {{ nome }}</p>
+        <p>3) preco: R$ {{ preco }}, desconto de {{ desconto * 100 }}%, total de R$ {{ precoComDesconto }}</p>
+        <p>Horário da Venda: {{ horaCerta() }}</p>
+        
+    </div>
+
 
     <script>
-        // ...
+        new Vue({
+            el: "#app",
+            data: {
+                nome: "Pedro Portella",
+                preco: 19.99,
+                desconto: 0.15
+            },
+            methods: {
+                horaCerta() {
+                    return new Date().toLocaleString()
+                }
+            },
+            computed: {
+                precoComDesconto() {
+                    return this.preco * (1 - this.desconto)
+                }
+            }
+        })
     </script>
 </body>
 </html>

@@ -7,9 +7,28 @@
     <script src="/js/vue.min.js"></script>
 </head>
 <body class="exercicio">
-
+    <div id="app">
+        <a v-bind:href="link">MEGA FUNK - MISTURADINHO</a><br>
+        <a :href="link">MEGA FUNK - MISTURADINHO</a>
+        <p>
+            <input type="text" v-model="nome"><br>
+            <input type="text" :value="nome"><br>
+            <span>{{nome}}</span>
+        </p>
+    </div>
     <script>
-        // ...
+        new Vue({
+            el: "#app",
+            data: {
+                nome: "",
+                link: "https://www.youtube.com/watch?v=iWNxZm-wKEM&list=TLPQMTMxMjIwMjC1y3xU0Zdx8A&index=2"
+            },
+            watch: {
+                nome(novoValor) {
+                    console.log(novoValor.toUpperCase())
+                }
+            }
+        })
     </script>
 </body>
 </html>

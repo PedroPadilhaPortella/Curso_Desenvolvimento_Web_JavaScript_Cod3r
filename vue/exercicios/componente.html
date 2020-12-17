@@ -7,9 +7,45 @@
     <script src="/js/vue.min.js"></script>
 </head>
 <body class="exercicio">
+    <div id="app">
+        <saudacao nome="Pedro Portella"></saudacao>
+        <contador></contador>
+        <contador></contador>
+        <contador></contador>
+
+
+    </div>
 
     <script>
-        // ...
+        Vue.component('saudacao', {
+            props: ['nome'],
+            data: function() {return { contador: 0 }},
+            template: ` <div>Bom dia {{ nome }} </div> `
+        })
+
+        Vue.component('contador', {
+            data: function() {
+                return { contador: 0}
+            },
+            methods: {
+                add() {
+                    this.contador++
+                },
+                subtract() {
+                    this.contador--
+                }
+            },
+            template: 
+            `<div>
+                <span>{{contador}}</span>
+                <button @click="add">+1</button>
+                <button @click="add">+1</button>
+            </div>`
+        })
+
+        new Vue({
+            el: "#app"
+        })
     </script>
 </body>
 </html>
