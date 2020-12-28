@@ -61,7 +61,7 @@ export default class Calculator extends Component {
             values[1] = 0
 
             this.setState({
-                displayValue: values[0],
+                displayValue: values[0].toString(),
                 operation: equals ? null : operation,
                 current: equals ? 0 : 1,
                 clearDisplay: !equals,
@@ -73,9 +73,9 @@ export default class Calculator extends Component {
     }
 
     addDigit(n) {
-        // if (n === '.' && this.state.displayValue.includes('.')) {
-        //     return
-        // }
+        if (n === '.' && this.state.displayValue.includes('.')) {
+            return
+        }
         const clearDisplay = this.state.displayValue === '0' || this.state.clearDisplay
         const currentValue = clearDisplay ? '' : this.state.displayValue
         const displayValue = currentValue + n
