@@ -1,4 +1,3 @@
-
 -- Mais estados
 INSERT INTO estados
     (nome, sigla, regiao, populacao)
