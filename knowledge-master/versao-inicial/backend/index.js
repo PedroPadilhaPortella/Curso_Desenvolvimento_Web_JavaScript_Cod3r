@@ -18,5 +18,6 @@ consign()
     .into(app)
 
 app.listen(3000, () => {
-    console.log('Backend executando...')
+    console.log('Backend executando na porta 3000')
+    console.log('http://localhost:3000/')
 })
