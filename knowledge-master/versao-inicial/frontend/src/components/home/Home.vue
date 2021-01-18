@@ -11,7 +11,7 @@
 
 <script>
 import axios from 'axios';
-import  { baseApiUrl } from '@/global';
+import  { baseApiUrl } from '../../global';
 import PageTitle from "../template/PageTitle";
 import Stat from "./Stat";
 

@@ -81,16 +81,17 @@ module.exports = app => {
     const remove = async (req, res) => {
         try {
             const articles = await app.db('articles').where({ userId: req.params.id })
-            notExistsOrError(articles, 'Usuário não pdoe ser deletado pois possui artigos');
+            notExistsOrError(articles, 'Usuário não pode ser deletado pois possui artigos relacionados');
 
             const rowsUpdated = await app.db('users')
                 .update({ deletedAt: new Date()})
                 .where({ id: req.params.id })
+            
             existsOrError(rowsUpdated, 'usuário não foi encontrado');
 
-            req.status(204).send()
+            res.status(204).send()
         } catch (msg) {
-            res.status(400).send(msg)
+            return res.status(400).send(msg)
         }
     }
 
