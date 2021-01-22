@@ -3,7 +3,7 @@ const queries = require('./queries');
 module.exports = app => {
     
     const { existsOrError } = app.api.validation
-    const limit = 10 //usado para fazer a paginação
+    const limit = 4 //usado para fazer a paginação
 
 
     const save = (req, res) => {
