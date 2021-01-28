@@ -10,6 +10,9 @@ import { baseApiUrl } from '@/global'
 import axios from 'axios'
 import PageTitle from '../template/PageTitle'
 
+import 'highlight.js/styles/dracula.css'
+import hljs from 'highlight.js'
+
 export default {
     name: 'ArticleById',
     components: { PageTitle },
@@ -21,6 +24,14 @@ export default {
     mounted() {
         const url = `${baseApiUrl}/articles/${this.$route.params.id}`
         axios.get(url).then(res => this.article = res.data)
+    },
+    updated() {
+        document.querySelectorAll('.article-content pre').forEach(e => {
+            hljs.configure({
+                languages: ['javascript', 'php', 'python', 'java', 'html', 'css']
+            })
+            hljs.highlightBlock(e)
+        })
     }
 }
 </script>
