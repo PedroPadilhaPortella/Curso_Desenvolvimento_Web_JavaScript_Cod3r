@@ -1,0 +1,7 @@
+.navegador {
+    background: dodgerblue;
+    padding: 20px 30px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}

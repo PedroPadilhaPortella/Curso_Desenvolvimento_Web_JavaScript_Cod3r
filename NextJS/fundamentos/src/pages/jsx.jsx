@@ -1,3 +1,6 @@
+import Navegador from "../components/Navegador";
+import Layout from "../components/Layout";
+
 export default function Jsx() {
     const language = 'Javascript';
     const data = { nome: "Pedro Portella", idade: 20, nacionalidade: 'Brasileiro' }
@@ -8,12 +11,12 @@ export default function Jsx() {
     }
 
     return (
-        <div>
+        <Layout>
             <h1>JSX é um conceito central</h1>
             {next(language)}
-            <p>Número Aleatório: { Math.floor(Math.random() * 100)}</p>
+            <p>Número Aleatório: {Math.floor(Math.random() * 100)}</p>
             <p>{JSON.stringify(data)}</p>
             {jsx}
-        </div>
+        </Layout>
     )
 }
