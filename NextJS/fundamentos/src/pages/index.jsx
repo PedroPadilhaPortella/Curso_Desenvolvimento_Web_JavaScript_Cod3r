@@ -15,6 +15,8 @@ export default function Index() {
                 <Navegador route="/app" title="Link para App" color="magenta"></Navegador>
                 <Navegador route="/jsx" title="Link para JSX"></Navegador>
                 <Navegador route="/navegacao" title="Link para Navegacao #01" color="crimson"></Navegador>
+                <Navegador route="/cliente/5" title="Link para Cliente" color="navy"></Navegador>
+                <Navegador route="/estado" title="Link para Estado" color="pink"></Navegador>
             </div>
         </>
     );
