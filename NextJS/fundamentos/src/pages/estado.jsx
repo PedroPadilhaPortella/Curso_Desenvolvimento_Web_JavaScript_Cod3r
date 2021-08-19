@@ -9,8 +9,8 @@ export default function Estado() {
     const state = useState(10)
     let [numero, setNumero] = state // React Hooks
 
-    const incrementar= () => setNumero(numero + 1)
-    const decrementar= () => setNumero(numero - 1)
+    const incrementar = () => setNumero(numero + 1)
+    const decrementar = () => setNumero(numero - 1)
 
     return (
         <Layout>
