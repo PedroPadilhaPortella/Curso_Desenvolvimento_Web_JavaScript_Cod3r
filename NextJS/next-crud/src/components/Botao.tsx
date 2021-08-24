@@ -1,3 +1,5 @@
+import Cliente from '../core/Cliente';
+
 interface BotaoProps {
     children: any;
     cor?: 'green' | 'blue' | 'gray';
