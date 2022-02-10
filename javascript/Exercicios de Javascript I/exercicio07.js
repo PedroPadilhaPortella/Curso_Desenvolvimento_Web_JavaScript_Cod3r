@@ -11,9 +11,9 @@ function Bhaskara (a = 0, b = 0, c = 0){
         return "Não existem Raizes Reais para essa função quadratica!";
     }
     let x1 = (-b + Math.sqrt(delta))/2 * a;
-    let x2 = (-b - Math.sqrt(delta))/2 * a;
-
+    
     if(delta > 0){
+        let x2 = (-b - Math.sqrt(delta))/2 * a;
         return `As raíses são ${x1} e ${x2}`;
     }else{
         return `As raíz é ${x1}`;
